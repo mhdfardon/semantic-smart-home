@@ -1,0 +1,34 @@
+#mainFrame404 {
+	text-align: center;
+    position: relative;
+    margin: 0 auto;
+	margin-top: 10%;
+    width: 500px;
+    min-height: 100px;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #D6D6D6;
+    background-color: #ffffff;
+	padding: 15px;
+}
+
+#mainFrame404 table {
+	width: 100%;
+	height: 100%;
+}
+
+td {
+	font-size:13px;
+	font-weight: bold;
+	color: black;
+	border: 0px none #C3C3C3;
+	padding: 4px;
+}
+
+#mainFrame404 .logoError {
+	width: 48px;
+	height: 48px;
+	background: transparent url(../pictures/icones/error.png) no-repeat;
+}
+

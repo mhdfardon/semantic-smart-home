@@ -1,0 +1,249 @@
+/*
+Main styles
+*/
+
+li {
+	list-style: none;
+	margin-bottom: 1em;	
+}
+
+label {
+	display: inline-table;
+	margin-bottom: 0.25em;
+}
+
+.formTitle {
+    width: 500px;
+    height: 20px;
+    font-size: 13px;
+	color: #1E639A;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+html {	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.mCenter {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+/* 	width : 100%; */
+/* 	position : relative; */
+}
+
+		#header {
+		
+/* 			margin: 1em 0 1em 1em; */
+			vertical-align:text-bottom;
+			background-position: 200px 15px;
+			width: 1300px;
+		    height: 203px;
+			background-color:white;
+			background-image:url(/smarthomedemo/sideline/images/ucbl.png);
+			background-repeat:no-repeat;
+			justify-content: center;
+			background-position: center;
+			/*margin: 1em 0 1em 1em;*/
+
+		}
+		
+			#logged {
+				cursor: pointer;
+				margin: 0 1em 0 0;
+				list-style-type: none;	
+				font-size: 1.0em;
+				padding: 0 0 0 0;;
+				line-height: 2em;
+				float: right;
+				font-weight: bold;
+/* 				display: none; */
+			}
+				#logged li {
+					padding-left: 2em;
+					display: inline;	
+				}
+				#logged li + li {
+					margin-left: 1em;
+				}
+				#who {
+					
+					background: url(/smarthomedemo/sideline/images/user.png) no-repeat;		
+				}
+				#what {
+					background: url(/smarthomedemo/sideline/images/security_lock.png) no-repeat;		
+				}
+			h1 {
+				margin: 0;
+				padding: 16px .5em .25em 0;
+				text-align: center;
+				
+				position:relative;
+
+				top:150px;
+/* 				bottom:10px; */
+				right:0px;
+
+				font-size: 3.0em;
+				font-style: italic;
+				color: #ff0066;
+				overflow: hidden;
+				zoom: 1;
+			}
+			h2 {
+				width : 100%;
+				margin: 4em 0 1.5em 0;
+				padding: 0.5em 0 0.5em 0;
+				/*float : right;*/
+				/*width : 82%;*/
+				font-size: 1.4em;
+				text-align: center;
+				border: 1px solid #bbb;
+				border-width: 1px 0 1px 0;
+				/*background: rgba(238, 238, 238, 0.5); ;*/
+
+			}
+		#incentive {
+			 text-align: center;	
+		}
+		
+		#mainContent {
+			float: left;
+			width : 70%;
+			 margin-left: 25px;
+			 margin-top: 50px;
+			 position : relative;
+		}
+			#card {
+				text-align: center;
+			}
+			#place-card {
+				 font-size: 2.4em;
+			}
+
+		#footer {
+			vertical-align:text-bottom;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			height: 100px;
+			padding-right: 120px;
+/* 			padding-top: 0; */
+/* 			margin: 0 1em 1em 0; */
+			text-align: right;
+			font-style: italic;
+/* 			background: url(/smarthomedemo/sideline/images/387.jpg) no-repeat right;		 */
+		}
+		img.bottom {
+			vertical-align:text-bottom;
+			
+		}
+		#test {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			text-align: right;
+		}
+		
+		
+			#mainContent tr:hover {
+				background-color: #A4A4A4;
+				color: #DF0101;
+			}
+			
+			#mainContent tr :hover {
+				background-color: black;
+				color: #FFFF00;
+			}
+
+table {
+	border: 1px solid black;
+	border-collapse: collapse;
+/* 	width: 50%; */
+}
+
+tr {
+	font-family: monospace;
+	border: 1px solid black;
+	width: 50%;
+	background-color: white;
+}
+
+td {
+	font-family: sans-serif;
+	border: 1px solid black;
+/* 	width: 150%; */
+/*  	width : 230px; */
+	padding-left: 5px;
+	text-align : center;
+}
+
+input.datePicker {
+	width : 70px;
+}
+
+th {
+	text-align: center;
+	border: 1px solid black;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 8px;
+/* 	width : inherit; */
+/* 	width : 280px; */
+}
+
+
+/*
+Utils
+*/
+
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix { 
+	zoom: 1;
+}
+
+.radius-10 {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#title_heading span {
+    width: 550px;
+    height: 30px;
+    line-height: 40px;
+    margin-left: 20px;
+}
+
+#fullscreen {
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:1001;
+	-moz-opacity: 0.5;
+	opacity:.50;
+	filter: alpha(opacity=50);
+}
+
+#loading {
+	display: none;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	z-index: 1002;
+}

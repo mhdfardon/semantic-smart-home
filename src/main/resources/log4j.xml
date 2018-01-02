@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{HH:mm:ss} - %5p - %C{1}.%M:%L - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="FILE" class="org.apache.log4j.DailyRollingFileAppender">
+		
+		<!-- Local log file -->
+		<param name="File" value="logs/m2-cci.log" />
+		
+		<!-- Server log file -->
+<!-- 		<param name="File" value="/app/oneflexi/oneweb/server/default/log/vafc_evolution.log"/> -->
+		
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} - %5p - %C.%M:%L - %m%n" />
+		</layout>
+	</appender>
+	
+	<!-- Definition des loggers des differentes fonctionnalites -->
+	<!--  log d'identification -->
+	<appender name="ACCESS" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="logs/cci-access.log" />
+		<param name="Append" value="false" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss}  -  ||%m%n" />
+		</layout>
+	</appender>
+	
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<!--               LOGGER APPLICATIF                    -->
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<logger name="LogAccess">
+		<level value="info" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="ACCESS" />
+	</logger>
+	
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<!--               LOGGER POUR LE CORE                  -->
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<!-- Definition des loggers pour le CORE. C'est ICI qu'il 
+		faut changer pour modifier juste le niveau de trace du CORE-->
+	<logger name="fr.liris.cci.service" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+	</logger>
+	
+	<logger name="fr.liris.cci.web" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+	</logger>
+	
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<!--          LOGGER POUR LES ACTIONS STRUTS            -->
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<logger name="fr.liris.cci.web.action" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+	</logger>
+	
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<!--          LOGGER POUR LES ACTIONS JERSEY            -->
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<logger name="fr.liris.cci.web.jersey" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+	</logger>
+	
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<!-- LOGGER DES FRAMEWORKS (UNIQUEMENT EN CAS d'ERREUR) -->
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<logger name="org.hibernate" additivity="false">
+		<level value="error" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+	</logger>
+		<logger name="org.apache" additivity="false">
+		<level value="error" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+	</logger>
+	<logger name="org.springframework" additivity="false">
+		<level value="error" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+	</logger>
+	<logger name="com.opensymphony.xwork2" additivity="false">
+		<level value="error" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+	</logger>
+	<logger name="org.synyx.hades.dao" additivity="false">
+		<level value="error" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+	</logger>
+	<logger name="freemarker" additivity="false">
+		<level value="error" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+	</logger>
+	
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<!--               LOGGER RACINE                        -->
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<root>
+		<level value="debug" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+	</root>
+</log4j:configuration>

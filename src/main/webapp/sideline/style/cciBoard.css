@@ -1,0 +1,77 @@
+.ui-buttonset .ui-button {
+    margin-left: 0;
+    margin-right: 0.3em;
+}
+
+#footerDiv {
+	margin-top: 200px;
+	margin-bottom: 500px;
+}
+
+#sensorsTableDiv tr.ligne0 {
+	background-color: #F4FA58;
+}
+
+#sensorsTableDiv tr.ligne1 {
+	background-color: #A9F5F2;
+}
+
+label {
+	margin-bottom: 1em;
+}
+
+#submit {
+	margin-top : 30px;
+}
+
+#sensorsTableDiv  td .left {
+	float: left;
+	width: 60%;
+	padding: 5px 0px;
+}
+
+#showHideDiv {
+	margin-top: 40px;
+}
+
+#mainContent #sensorsTableDiv  td .loadSensor {
+	float: right;
+	width: 24px;
+	height: 24px;
+	margin-top: 0.3em;
+	margin-left : 5px;
+	background: url(/ccidemo/sideline/icons/applications_system.png);
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/ccidemo/sideline/icons/applications_system.png",
+		sizingMethod="scale" );
+	cursor: pointer;
+}
+
+#mainContent #sensorsTableDiv  td .loadSensor2 {
+	float: right;
+	width: 24px;
+	height: 24px;
+	margin-top: 0.3em;
+	margin-left : 5px;
+	background: url(/ccidemo/sideline/icons/applications_system.png);
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/ccidemo/sideline/icons/applications_system.png",
+		sizingMethod="scale" );
+	cursor: pointer;
+}
+
+#mainContent #showHideDiv #showHideIcon {
+	margin-left : 5px;
+/* 	float: left; */
+	width: 48px;
+	height: 48px;
+	margin-top: 0.3em;
+	background: url(/ccidemo/sideline/icons/showHide.png);
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/ccidemo/sideline/icons/showHide.png",
+		sizingMethod="scale" );
+	cursor: pointer;
+}
+input.email {
+	width : 300px;
+}

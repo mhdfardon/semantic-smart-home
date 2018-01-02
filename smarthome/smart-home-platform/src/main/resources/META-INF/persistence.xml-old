@@ -1,0 +1,19 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+	version="1.0">
+
+<!-- 	<persistence-unit name="hibernate" transaction-type="RESOURCE_LOCAL"> -->
+<!-- 		<provider>org.hibernate.ejb.HibernatePersistence</provider> -->
+<!-- 		<class>fr.liris.cci.model.User</class> -->
+<!-- 		<class>fr.liris.cci.model.Student</class> -->
+<!-- 		<class>fr.liris.cci.model.Formation</class> -->
+<!-- 		<class>fr.liris.cci.model.Sensor</class> -->
+<!-- 		<class>fr.liris.cci.model.Actuator</class> -->
+<!-- 		<class>fr.liris.cci.model.Rule</class> -->
+<!-- 		<class>fr.liris.cci.model.Action</class> -->
+
+		<!-- Definition des properties specifiques au provider (ici hibernate) 
+			: cache, dialect -->
+<!-- 	</persistence-unit> -->
+</persistence>

@@ -1,0 +1,86 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.devMode" value="${strutsMode}" />
+	<constant name="struts.custom.i18n.resources" value="labels" />
+	<package name="interceptors-default" extends="struts-default"
+		namespace="/pages/userAccess">
+		<interceptors>
+			<interceptor-stack name="globalInterceptor">
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+				<interceptor-ref name="authenticationInterceptor"></interceptor-ref>
+			</interceptor-stack>
+			<interceptor name="authenticationInterceptor"
+				class="fr.liris.smarthome.web.action.AuthenticationInterceptor" />
+		</interceptors>
+		<default-interceptor-ref name="globalInterceptor" />
+		<global-results>
+			<result name="unauthenticated">/pages/userAccess/userAccess.jsp</result>
+		</global-results>
+	</package>
+
+	<package name="access" extends="struts-default" namespace="/pages/userAccess">
+		<action name="cciBoardAction" class="fr.liris.smarthome.web.action.CciBoardAction">
+			<result name="success">/pages/cciBoard/cciBoard.jsp</result>
+			<result name="error">/pages/error/error.jsp</result>
+		</action>
+		<action name="studentDetailsAction" class="fr.liris.smarthome.web.action.CciStudentAction">
+			<result name="success">/pages/cciBoard/studentDetails.jsp</result>
+			<result name="error">/pages/error/error.jsp</result>
+		</action>
+		<action name="newStudentAction" class="fr.liris.smarthome.web.action.CciStudentCreationAction">
+			<result name="success">/pages/studentCreation/studentCreation.jsp
+			</result>
+			<result name="error">/pages/error/error.jsp</result>
+		</action>
+		<action name="studentCreationAction" class="fr.liris.smarthome.web.action.CciStudentCreationAction" method="createStudent">
+			<result name="success" type="redirectAction">
+				<param name="actionName">cciBoardAction</param>
+			</result>
+			<result name="error">/pages/error/error.jsp</result>
+		</action>
+		<action name="sensorBoardAction" class="fr.liris.smarthome.web.action.SensorBoardAction" method="execute">
+			<result name="success">/pages/sensorBoard/sensorBoard.jsp</result>
+			<result name="error">/pages/error/error.jsp</result>
+		</action>
+		<action name="newSensorAction" class="fr.liris.smarthome.web.action.SensorBoardAction" method="execute">
+			<result name="success">/pages/newSensor/newSensor.jsp</result>
+			<result name="error">/pages/error/error.jsp</result>
+		</action>
+		<action name="createSensorAction" class="fr.liris.smarthome.web.action.SensorBoardAction" method="createSensor">
+			<result name="success" type="redirectAction">
+				<param name="actionName">sensorBoardAction</param>
+			</result>
+			<result name="error">/pages/error/error.jsp</result>
+		</action>
+		
+		<action name="actuatorBoardAction" class="fr.liris.smarthome.web.action.ActuatorBoardAction" method="execute">
+			<result name="success">/pages/actuatorBoard/actuatorBoard.jsp</result>
+			<result name="error">/pages/error/error.jsp</result>
+		</action>
+		<action name="newActuatorAction" class="fr.liris.smarthome.web.action.ActuatorBoardAction" method="execute">
+			<result name="success">/pages/newActuator/newActuator.jsp</result>
+			<result name="error">/pages/error/error.jsp</result>
+		</action>
+		<action name="createActuatorAction" class="fr.liris.smarthome.web.action.ActuatorBoardAction" method="createActuator">
+			<result name="success" type="redirectAction">
+				<param name="actionName">actuatorBoardAction</param>
+			</result>
+			<result name="error">/pages/error/error.jsp</result>
+		</action>
+		
+		<action name="ruleAction" class="fr.liris.smarthome.web.action.RulesAction" method="execute">
+			<result name="success">/pages/sensorRule/sensorRule.jsp</result>
+			<result name="error">/pages/error/error.jsp</result>
+		</action>
+		<action name="ruleActionCreationAction" class="fr.liris.smarthome.web.action.RulesAction" method="createRuleAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">ruleAction</param>
+				<param name="ruleId">${ruleId}</param>
+			</result>
+			<result name="error">/pages/error/error.jsp</result>
+		</action>
+		
+	</package>
+</struts>

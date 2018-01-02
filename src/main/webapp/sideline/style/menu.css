@@ -1,0 +1,157 @@
+#menu_heading {
+/* 	background-color : #58ACFA; */
+	float:left;
+    width: 18%;
+    height: 0%;
+    margin : 50px 0 0 0;
+/* 	position: relative; */
+}
+
+ul {
+/* 	position:  */
+	margin : 0;
+	padding-left : 10px;
+}
+
+#navigation { 
+	/* menu title? */
+	margin-top : 5px;
+    list-style: none outside non; /* Pour la suppression des styles, puces etc */
+    width: 95%;
+    height: 100%;
+	font-size: 11px;
+	color: red;
+	font-weight: bold;
+    text-decoration: none;
+    text-align: left;
+}
+
+#navigation div.validation {
+    line-height: 28px;
+	height:28px;
+	margin: 10px 0px;
+	border-color: #808080;
+    border-width: 1px;
+	border-style: dashed dashed dashed dashed;
+	background-color: #f0f0f0;
+	width: 80%;
+}
+
+#navigation div.validationLabel {
+	float: left;
+	padding: 0px 0px;
+}
+
+#navigation div.menuLine {
+	width:80%;
+	border-color: #F60;
+    border-width: 2px;
+	border-style: none none solid none;
+	margin: 30px 0px 0px 0px;
+	text-align: center;
+}
+
+#navigation div.validationBlock {
+	float: right;
+	margin-left: 0px;
+	cursor:hand;
+}
+
+#navigation div.validationIcone {
+	float:right;
+	height: 24px;
+	width: 24px;
+	margin: 0px;
+	cursor:hand;
+    background-image: url(../pictures/icones/validation.png);
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/env/pictures/icones/validation.png");
+}
+
+#navigation .menuHeading {
+	color: red;
+	text-decoration: underline #666666;
+	font-size : 15px;
+	text-align: center;
+}
+
+#navigation a {
+	color: black;
+    text-decoration: none;
+	font-weight: bold;
+}
+
+#navigation li a {
+    padding: 0px;
+    font-size: 11px;
+    display: block;
+    height: 1%;
+	padding-left: 0px;
+}
+
+#navigation .validation a {
+    padding: 0px;
+    font-size: 11px;
+    display: block;
+    height: 1%;
+}
+
+#navigation li a:hover, #navigation li a:active, #navigation .validation a:hover, #navigation .validation a:active  {
+    color: red;
+    text-decoration: none;
+    display: block;
+    height: 1%;
+}
+
+#navigation li.enTete {
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: left;
+	margin: 10px 0px 10px 0px;
+}
+
+#navigation li.enTete div.headingBlock {
+	float: left;
+	width: 100%;
+	border-color: #808080;
+    border-width: 1px;
+	border-style: none none solid none;
+	text-align: left;
+	margin-bottom: 5px;
+	padding: 0px 0px;
+}
+
+#navigation li.enTete div.headingPuce {
+	float:left;
+	width: 12px;
+	height: 12px;
+	max-height: 12px;
+	background-repeat: none;
+	background-image: url(/env/pictures/icones/puce.png);
+	background-repeat: none;
+	overflow:hidden;
+
+}
+
+#navigation li.enTete div.headingLabel {
+	margin-left: 0px;
+}
+
+#navigation .menuHeading {
+	margin-top: 20px;
+}
+
+#navigation .menuHeading a{
+ 	font-size: 11px;
+	color: #F60;
+	font-weight: bold;
+	text-decoration: underline #666666; 
+}
+
+#navigation .menuHeading a:hover, #navigation .menuHeading a:active{
+ 	font-size: 11px;
+	color: black;
+	font-weight: bold;
+	text-decoration: underline #666666; 
+}

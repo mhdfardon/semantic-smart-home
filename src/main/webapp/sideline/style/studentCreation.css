@@ -1,0 +1,74 @@
+.ui-buttonset .ui-button {
+    margin-left: 0;
+    margin-right: 0.3em;
+}
+
+input.datePicker {
+	width : 70px;
+}
+
+input.timePicker {
+	width : 40px;
+}
+
+body {
+	height: 1000px;
+}
+
+#mainContent tr:hover {
+	background-color : transparent;
+	/* 	color: white; */
+}
+
+#mainContent tr :hover {
+	background-color : transparent;
+	color: black;
+}
+
+#mainContent #studentCreationTable td.right {
+	vertical-align: text-bottom; 
+	top: 10%;
+	padding : 7px;
+	text-align : right;
+	border: none;
+}
+
+#mainContent #studentCreationTable td.left {
+	vertical-align: text-bottom; 
+	padding : 7px;
+	text-align : left;
+	border: none;
+}
+
+#mainContent #studentCreationTable tr {
+	padding : 7px;
+	text-align : right;
+	border: none;
+}
+
+#mainContent #studentCreationDiv table {
+	vertical-align: text-bottom; 
+	border: none;
+}
+
+#studentCreationDiv {
+	width : 700px;
+	padding : 2em;
+	margin-top : 10px;
+	margin-bottom : 20px;
+	border: 1px solid #58ACFA;
+	border-width: 1px;
+}
+
+.clientSelectIcon {
+	float: left;
+	width: 16px;
+	height: 16px;
+	margin-top: 0.3em;
+	margin-left : 15px;
+	background: url(/student/sideline/icons/select01.png);
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/student/sideline/icons/select01.png",
+		sizingMethod="scale" );
+	cursor: pointer;
+}

@@ -1,0 +1,29 @@
+body {
+	height: 500px;
+}
+
+span.errorMessage {
+	color: red;
+}
+
+table,tr,td,th {
+	border: none;
+}
+
+td {
+	padding-bottom: 10px;
+}
+
+td.tdLabel {
+	text-align: right;
+}
+
+#mainContent tr:hover {
+	background-color : transparent;
+	/* 	color: white; */
+}
+
+#mainContent tr :hover {
+	background-color : transparent;
+	color: black;
+}
